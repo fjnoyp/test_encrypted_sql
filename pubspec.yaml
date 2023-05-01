@@ -1,0 +1,35 @@
+name: test_encrypted_sql
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  drift: ">=2.4.0 <2.6.0"
+  path_provider: ^2.0.0
+
+  amplify_flutter: ^1.0.0
+  # amplify_datastore: ^1.0.0-supports-only-mobile
+
+  # This is old non encrypted
+  # I don't think it can be used in conjunction with sqlcipher
+  #sqlite3: ^1.8.0
+
+  # This cannot read a database file created by sqlite3!
+  # As a db file will exist, we need to delete it
+  # Or create another one
+  sqlcipher_flutter_libs: ^0.5.4
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+flutter:
+  uses-material-design: true
