@@ -30,6 +30,7 @@ QueryExecutor connect({
     Future.sync(() async {
       final resolvedPath = await path;
       final dbPath = p.join(resolvedPath!, 'com.amplify.$name.sqlite');
+      print("THIS IS DB PATH : " + dbPath);
 
       final receiveDriftIsolate = ReceivePort();
       await Isolate.spawn(
